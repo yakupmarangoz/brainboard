@@ -1,0 +1,12 @@
+import { Router } from "express";
+import controller from "../controllers/SharedNotebookController.js";
+import { authenticateJWTToken } from "../middleware/AuthenticationMiddleWare.js";
+const router = Router();
+router.use(authenticateJWTToken);
+router.post("/share", controller.shareNotebook);
+router.put("/permission", controller.updatePermission);
+router.post("/shared-with-users", controller.getSharedWithUsers);
+router.get("/shared-with-me", controller.getSharedNotebooks);
+router.delete("/remove", controller.removeAccess);
+router.post("/permission", controller.getUserPermission);
+export default router;

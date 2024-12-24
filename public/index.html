@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainBoard|Collaborative Notebook</title>
+  <link href="style/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold text-primary" href="index.html">BrainBoard</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link btn btn-primary text-dark-emphasis px-3" href="login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-primary text-dark-emphasis px-3" href="signup.html">Sign up</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <main class="flex-grow-1">
+        <div class="container text-center my-5">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold text-primary">Welcome to BrainBoard</h1>
+                    <p class="lead text-secondary mt-3">Collaborate like never before! Share ideas, take notes, and work together in real-time.</p>
+                    <a href="signup.html" class="btn btn-primary btn-lg mt-4">Get Started</a>
+                </div>
+            </div>
+        </div>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Real-Time Collaboration</h5>
+                            <p class="card-text">Work on the same notebook with your team in real-time. Brainstorm together!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Organized Notebooks</h5>
+                            <p class="card-text">Keep all your ideas neatly organized and accessible whenever you need them.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-light text-center py-3 mt-auto">
+        <div class="container">
+            <small>Made by Yakup Marangoz</small>
+        </div>
+    </footer>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script>    
+if(localStorage.getItem("token")){
+    window.location.href = "/dashboard.html"; 
+}
+  </script>
+</body>
+</html>

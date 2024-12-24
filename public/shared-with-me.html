@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shared with Me</title>
+  <link href="style/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-primary" href="dashboard.html">BrainBoard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-primary px-3" href="dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link btn btn-outline-primary px-3 active" href="shared-with-me.html">Shared with me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-danger px-3" id="logOut">Log out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Shared with Me</h1>
+      <p class="lead">View all notebooks shared with you.</p>
+    </div>
+  </header>
+  <div class="container mt-4">
+    <div id="alertContainer" style="position: fixed; top: 10%; left: 50%; transform: translateX(-50%); z-index: 1050; width: 50%;"></div>
+  </div>
+  <div class="container my-4">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <input 
+          type="text" 
+          id="searchSharedNotebooks" 
+          class="form-control" 
+          placeholder="Search by notebook name"
+        />
+      </div>
+    </div>
+  </div>
+  <main class="container my-5">
+    <div class="row g-4" id="sharedNotebooksContainer">
+    </div>
+  </main>
+  <footer class="bg-light text-center py-3 mt-auto">
+    <div class="container">
+      <small>Made by Yakup Marangoz</small>
+    </div>
+  </footer>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/shared-with-me.js"></script>
+</body>
+</html>
